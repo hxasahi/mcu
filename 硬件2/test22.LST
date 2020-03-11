@@ -1,0 +1,80 @@
+C51 COMPILER V9.01   TEST22                                                                02/21/2020 15:14:46 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE TEST22
+OBJECT MODULE PLACED IN test22.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE test22.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /**********************与飞电子开发板例程************************
+   2          *  名称：8*8点阵显示
+   3             内容：和数码管显示方式相同，这里使用P0口和P2口
+   4             注意：点阵引脚的顺序，在开发板上有标点阵的引脚序号，不要插反了
+   5          *  公司：与飞电子
+   6          *  淘宝：http://yfmcu.taobao.com       
+   7          *  编写：与飞
+   8          *  日期：2013-1-4
+   9          *   QQ : 112990183
+  10          *  晶振:11.0592MHZ
+  11          *  说明：免费开源，不提供源代码分析
+  12          ******************************************************************/
+  13          
+  14          #include<reg52.h> //包含头文件，一般情况不需要改动，头文件包含特殊功能寄存器的定义
+  15          
+  16          unsigned char const yufei[]={0x00,0x6C,0x92,0x82,0x44,0x28,0x10,0x00};// 心的形状
+  17          unsigned char code wei[]={0x7f,0xbf,0xdf,0xef,0xf7,0xfb,0xfd,0xfe};   //分别对应相应的段亮
+  18          
+  19          sbit DU = P2^6;
+  20          sbit WE = P2^7;
+  21          /*------------------------------------------------
+  22                              关数码管
+  23          ------------------------------------------------*/
+  24          void cmg88()
+  25          {
+  26   1      DU=1;  
+  27   1      P0=0X00;
+  28   1      DU=0;
+  29   1      
+  30   1      }
+  31          /*------------------------------------------------
+  32                              延时程序
+  33          ------------------------------------------------*/
+  34          void delay(unsigned int cnt)
+  35          {
+  36   1       while(--cnt);
+  37   1      }
+  38          /*------------------------------------------------
+  39                           主程序
+  40          ------------------------------------------------*/
+  41          main()
+  42          {
+  43   1       unsigned char i;
+  44   1      
+  45   1       while(1)
+  46   1            {
+  47   2                 cmg88();     //关闭数码管
+  48   2             P0=yufei[i];//取显示数据
+  49   2                 P2=wei[i];  //取位码
+  50   2                 delay(200); //扫描间隙延时，时间太长会造成闪烁，太短会重影
+  51   2                 i++;
+  52   2                 if(8==i)    
+  53   2                   i=0;
+  54   2            }
+  55   1      }
+C51 COMPILER V9.01   TEST22                                                                02/21/2020 15:14:46 PAGE 2   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =      8    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

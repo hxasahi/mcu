@@ -1,0 +1,3 @@
+"ceshi.obj" 
+TO "test.hex" 
+RAMSIZE(256) 

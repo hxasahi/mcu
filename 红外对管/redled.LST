@@ -1,0 +1,43 @@
+C51 COMPILER V9.01   REDLED                                                                02/29/2020 17:26:47 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE REDLED
+OBJECT MODULE PLACED IN redled.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE redled.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          sbit receive=P2^0;
+   3          sbit fm=P2^1;
+   4          void main()
+   5          {
+   6   1          fm=0;
+   7   1          while(1)
+   8   1              {
+   9   2              if (receive==0)
+  10   2                  {
+  11   3                      P1=0xfC;
+  12   3                              fm=1;
+  13   3                  }
+  14   2                      else if (receive==1)
+  15   2                      {
+  16   3                          fm=0;
+  17   3                          P1=0xf3;
+  18   3                      }
+  19   2              }
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     22    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

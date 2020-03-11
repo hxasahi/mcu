@@ -1,0 +1,5 @@
+"aiyalihai.obj",
+"test.obj",
+"test22.obj" 
+TO "test22" 
+RAMSIZE(256) 

@@ -1,0 +1,89 @@
+C51 COMPILER V9.01   LIHAI                                                                 02/21/2020 10:53:57 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LIHAI
+OBJECT MODULE PLACED IN LIHAI.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE LIHAI.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          k1=P3^4;
+*** ERROR C247 IN LINE 3 OF LIHAI.C: non-address/-constant initializer
+   4          k2=P3^5;
+*** ERROR C247 IN LINE 4 OF LIHAI.C: non-address/-constant initializer
+   5          
+   6          void delay_s()
+   7          {
+   8   1       int x,y;
+   9   1       for(x=0;x<=50;x++)
+  10   1       for(y=0;y<=200;y++);
+  11   1      }
+  12          
+  13          void delay()
+  14          {
+  15   1          int a,b;
+  16   1              for (a=0;a<=500;a++)
+  17   1              for (b=0;b<=200;b++);
+  18   1      }
+  19          
+  20          void main()
+  21          {
+  22   1          while(1)
+  23   1              {
+  24   2                  if (k1==0){
+  25   3              P1=0xfe; /*1*/
+  26   3                      delay_s();
+  27   3                      P1=0xfd; /*2*/
+  28   3                      delay_s();
+  29   3                      P1=0xfb; /*3*/
+  30   3                      delay_s();
+  31   3                      P1=0xf7; /*4*/
+  32   3                      delay_s();
+  33   3                      P1=0xef; /*5*/
+  34   3                      delay_s();
+  35   3                      P1=0xdf; /*6*/
+  36   3                      delay_s();
+  37   3                      P1=0xbf;  /*7*/
+  38   3                      delay_s();
+  39   3                      P1=0x7f;  /*8*/
+  40   3                      delay_s();
+  41   3                      }
+  42   2                      elif(k2==0){
+  43   3                      P1=0xfe;        /*1,2*/
+  44   3                      delay();
+  45   3                      P1=0xfd;
+  46   3                      delay();
+  47   3                      
+  48   3                      P1=0xfb;   /*3,4*/
+  49   3                      delay();
+  50   3                      P1=0xf7;                
+  51   3                      delay();
+  52   3      
+  53   3                      P1=0xef;   /*5,6*/
+C51 COMPILER V9.01   LIHAI                                                                 02/21/2020 10:53:57 PAGE 2   
+
+  54   3                      delay();
+  55   3                      P1=0xdf;
+  56   3                      delay();
+  57   3      
+  58   3                      P1=0xbf;  /*7,8*/
+  59   3                      delay();
+  60   3                      P1=0x7f;  
+  61   3                      delay();
+  62   3                      }
+  63   2                      else{
+  64   3                      P1=0x00;
+  65   3                      delay_s();
+  66   3                      P1=0xff;
+  67   3                      delay_s();
+  68   3                      P1=0x00;
+  69   3                      delay();
+  70   3                      P1=0xff;
+  71   3                      delay();
+  72   3                      }               
+  73   2              }
+  74   1      } 
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  2 ERROR(S)

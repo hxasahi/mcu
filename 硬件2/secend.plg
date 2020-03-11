@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\硬件2\secend.uvproj
+Project File Date:  02/21/2020
+
+<h2>Output:</h2>
+Build target '目标 1'
+compiling aiyalihai.c...
+AIYALIHAI.C(3): error C247: non-address/-constant initializer
+AIYALIHAI.C(4): error C247: non-address/-constant initializer
+目标未创建
+Build target '目标 1'
+compiling aiyalihai.c...
+AIYALIHAI.C(42): warning C206: 'elif': missing function-prototype
+AIYALIHAI.C(42): error C267: 'elif': requires ANSI-style prototype
+AIYALIHAI.C(42): error C141: syntax error near '{'
+AIYALIHAI.C(63): error C141: syntax error near 'else'
+目标未创建
+Build target '目标 1'
+compiling aiyalihai.c...
+linking...
+Program Size: data=9.0 xdata=0 code=204
+creating hex file from "lihaiya"...
+"lihaiya" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+compiling aiyalihai.c...
+linking...
+Program Size: data=9.0 xdata=0 code=94
+creating hex file from "lihaiya2"...
+"lihaiya2" - 0 Error(s), 0 Warning(s).

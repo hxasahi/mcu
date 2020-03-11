@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\新建文件夹 (2)\test.uvproj
+Project File Date:  02/20/2020
+
+<h2>Output:</h2>
+Build target '目标 1'
+compiling ceshi.c...
+CESHI.C(10): error C141: syntax error near '}'
+目标未创建
+Build target '目标 1'
+compiling ceshi.c...
+CESHI.C(9): error C141: syntax error near '}'
+目标未创建
+Build target '目标 1'
+compiling ceshi.c...
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "test"...
+"test" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "test"...
+"test" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "test.hex"...
+OBJECT TO HEX FILE CONVERTER OH51 V2.6
+COPYRIGHT KEIL ELEKTRONIK GmbH 1991 - 2001
+GENERATING INTEL HEX FILE: test.hex
+*** ERROR: PREMATURE END OF FILE ON 'test.hex'
+*** OH51 ABORTED.
+"test.hex" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "ceshi.hex"...
+OBJECT TO HEX FILE CONVERTER OH51 V2.6
+COPYRIGHT KEIL ELEKTRONIK GmbH 1991 - 2001
+GENERATING INTEL HEX FILE: ceshi.hex
+*** ERROR: PREMATURE END OF FILE ON 'ceshi.hex'
+*** OH51 ABORTED.
+"ceshi.hex" - 0 Error(s), 0 Warning(s).
+Build target '目标 1'
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "ceshi2"...
+"ceshi2" - 0 Error(s), 0 Warning(s).

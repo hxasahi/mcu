@@ -1,0 +1,48 @@
+C51 COMPILER V9.01   DELAYTEST_1                                                           02/24/2020 14:52:46 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE DELAYTEST_1
+OBJECT MODULE PLACED IN delaytest_1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE delaytest_1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*12M¾§Õñ*/
+   2          #include<reg52.h>
+   3          unsigned int sum;
+   4          sbit led = P1^1;
+   5          void main()
+   6          {
+   7   1      TMOD = 0x01;
+   8   1      TH0 = 60;
+   9   1      TL0 = 176;
+  10   1      EA = 1;
+  11   1      ET0 = 1;
+  12   1      TR0 = 1;
+  13   1      while(1){
+  14   2              if (sum == 20 ){
+  15   3                  led = ~led;
+  16   3                      sum = 0;
+  17   3              }
+  18   2      }
+  19   1      }
+  20          void T0_time() interrupt 1
+  21          {
+  22   1          TH0 = 60;
+  23   1              TL0 = 176;
+  24   1              sum++;
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     50    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

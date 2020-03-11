@@ -1,0 +1,105 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/20/2020  17:30:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE kled.obj, kled1.obj TO secend RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  kled.obj (KLED)
+  kled1.obj (KLED1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  secend (KLED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000CH     UNIT         ?C_C51STARTUP
+            CODE    000FH     0004H     UNIT         ?PR?MAIN?KLED
+            CODE    0013H     0004H     UNIT         ?PR?MAIN?KLED1
+
+
+
+OVERLAY MAP OF MODULE:   secend (KLED)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?KLED
+
+
+
+IGNORED SYMBOLS:
+   MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  secend (KLED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KLED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A0H.0       PUBLIC        beep
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/20/2020  17:30:45  PAGE 2
+
+
+  C:000FH         PUBLIC        main
+  B:0080H.1       PUBLIC        led_1
+  B:0080H.2       PUBLIC        led_2
+  B:0080H.3       PUBLIC        led_3
+  B:0080H.4       PUBLIC        led_4
+  -------         PROC          MAIN
+  C:000FH         LINE#         10
+  C:000FH         LINE#         11
+  C:000FH         LINE#         12
+  C:000FH         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        KLED
+
+  -------         MODULE        KLED1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A0H.0       PUBLIC        beep
+  C:0013H         PUBLIC        main
+  B:0080H.1       PUBLIC        led_1
+  B:0080H.2       PUBLIC        led_2
+  B:0080H.3       PUBLIC        led_3
+  B:0080H.4       PUBLIC        led_4
+  -------         PROC          MAIN
+  C:0013H         LINE#         10
+  C:0013H         LINE#         11
+  C:0013H         LINE#         12
+  C:0013H         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        KLED1
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN
+    MODULE:  kled1.obj (KLED1)
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN?KLED1
+
+Program Size: data=9.0 xdata=0 code=23
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  1 ERROR(S)

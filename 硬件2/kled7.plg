@@ -1,0 +1,17 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\硬件2\secend.uvproj
+Project File Date:  02/21/2020
+
+<h2>Output:</h2>
+Build target '目标 1'
+compiling kled1.c...
+KLED1.C(3): error C247: non-address/-constant initializer
+KLED1.C(4): error C247: non-address/-constant initializer
+compiling LIHAI.c...
+LIHAI.C(3): error C247: non-address/-constant initializer
+LIHAI.C(4): error C247: non-address/-constant initializer
+目标未创建

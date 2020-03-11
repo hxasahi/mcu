@@ -1,0 +1,23 @@
+C51 COMPILER V9.01   FIRST                                                                 02/20/2020 19:10:00 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE FIRST
+OBJECT MODULE PLACED IN first.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE first.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          sbit led_1 = P0^1;
+   4          
+   5          void main()
+   6          {
+   7   1          led_1 = 0;
+   8   1              while(1)
+   9   1      
+  10   1      }
+*** ERROR C141 IN LINE 10 OF FIRST.C: syntax error near '}'
+  11           
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

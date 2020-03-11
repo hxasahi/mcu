@@ -1,0 +1,32 @@
+C51 COMPILER V9.01   KYLM                                                                  02/20/2020 17:43:18 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KYLM
+OBJECT MODULE PLACED IN kylm.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE kylm.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          sbit led_1 = P0^1;
+   4          
+   5          void main()
+   6          {
+   7   1          while(1)
+   8   1          led_1 = 0;
+   9   1      } 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      4    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

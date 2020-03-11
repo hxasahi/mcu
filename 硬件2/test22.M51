@@ -1,0 +1,257 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/21/2020  15:14:47  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE aiyalihai.obj, test.obj, test22.obj TO test22 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  aiyalihai.obj (AIYALIHAI)
+  test.obj (TEST)
+  test22.obj (TEST22)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  test22 (AIYALIHAI)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?TEST22
+            DATA    0010H     0005H     UNIT         ?DT?TEST
+            DATA    0015H     0001H     UNIT         ?DT?MAIN?TEST
+            DATA    0016H     0001H     UNIT         ?DT?MAIN?TEST22
+            IDATA   0017H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0032H     UNIT         ?PR?MAIN?AIYALIHAI
+            CODE    00C1H     0026H     UNIT         ?PR?MAIN?TEST
+            CODE    00E7H     0026H     UNIT         ?PR?MAIN?TEST22
+            CODE    010DH     001DH     UNIT         ?PR?DELAY_S?AIYALIHAI
+            CODE    012AH     0012H     UNIT         ?C_INITSEG
+            CODE    013CH     000AH     UNIT         ?PR?_DELAY?TEST
+            CODE    0146H     000AH     UNIT         ?PR?_DELAY?TEST22
+            CODE    0150H     0008H     UNIT         ?PR?CLEAN?TEST
+            CODE    0158H     0008H     UNIT         ?PR?CMG88?TEST22
+            CODE    0160H     0008H     UNIT         ?CO?TEST22
+            CODE    0168H     0005H     UNIT         ?CO?TEST
+
+
+
+OVERLAY MAP OF MODULE:   test22 (AIYALIHAI)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?AIYALIHAI
+  +--> ?C_INITSEG
+
+?PR?MAIN?AIYALIHAI
+  +--> ?PR?DELAY_S?AIYALIHAI
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/21/2020  15:14:47  PAGE 2
+
+
+
+
+
+IGNORED SYMBOLS:
+   MAIN
+   _DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  test22 (AIYALIHAI)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        AIYALIHAI
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:008FH         PUBLIC        main
+  C:010DH         PUBLIC        delay_s
+  -------         PROC          DELAY_S
+  -------         DO            
+  D:0006H         SYMBOL        x
+  D:0004H         SYMBOL        y
+  -------         ENDDO         
+  C:010DH         LINE#         3
+  C:010DH         LINE#         4
+  C:010DH         LINE#         6
+  C:0110H         LINE#         7
+  C:0129H         LINE#         8
+  -------         ENDPROC       DELAY_S
+  -------         PROC          MAIN
+  C:008FH         LINE#         10
+  C:008FH         LINE#         11
+  C:008FH         LINE#         12
+  C:008FH         LINE#         13
+  C:008FH         LINE#         14
+  C:0092H         LINE#         15
+  C:0095H         LINE#         16
+  C:0098H         LINE#         17
+  C:009BH         LINE#         18
+  C:009EH         LINE#         19
+  C:00A1H         LINE#         20
+  C:00A4H         LINE#         21
+  C:00A7H         LINE#         22
+  C:00AAH         LINE#         23
+  C:00ADH         LINE#         24
+  C:00B0H         LINE#         25
+  C:00B3H         LINE#         26
+  C:00B6H         LINE#         27
+  C:00B9H         LINE#         28
+  C:00BCH         LINE#         29
+  C:00BFH         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        AIYALIHAI
+
+  -------         MODULE        TEST
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/21/2020  15:14:47  PAGE 3
+
+
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0150H         PUBLIC        clean
+  D:00A8H         PUBLIC        IE
+  C:013CH         PUBLIC        _delay
+  C:0168H         PUBLIC        shang
+  B:00A0H.6       PUBLIC        DU
+  D:00B8H         PUBLIC        IP
+  C:00C1H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0010H         PUBLIC        zuo
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          CLEAN
+  C:0150H         LINE#         9
+  C:0150H         LINE#         10
+  C:0150H         LINE#         11
+  C:0152H         LINE#         12
+  C:0155H         LINE#         13
+  C:0157H         LINE#         15
+  -------         ENDPROC       CLEAN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        cnt
+  C:013CH         LINE#         16
+  C:013CH         LINE#         17
+  C:013CH         LINE#         18
+  C:0145H         LINE#         19
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0015H         SYMBOL        i
+  -------         ENDDO         
+  C:00C1H         LINE#         21
+  C:00C1H         LINE#         22
+  C:00C1H         LINE#         25
+  C:00C1H         LINE#         26
+  C:00C1H         LINE#         27
+  C:00C4H         LINE#         28
+  C:00CCH         LINE#         29
+  C:00D4H         LINE#         30
+  C:00DBH         LINE#         31
+  C:00DDH         LINE#         32
+  C:00E2H         LINE#         33
+  C:00E5H         LINE#         34
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TEST
+
+  -------         MODULE        TEST22
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/21/2020  15:14:47  PAGE 4
+
+
+  C:0146H         PUBLIC        _delay
+  B:00A0H.6       PUBLIC        DU
+  D:00B8H         PUBLIC        IP
+  D:0008H         PUBLIC        yufei
+  C:00E7H         PUBLIC        main
+  C:0158H         PUBLIC        cmg88
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0160H         PUBLIC        wei
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          CMG88
+  C:0158H         LINE#         24
+  C:0158H         LINE#         25
+  C:0158H         LINE#         26
+  C:015AH         LINE#         27
+  C:015DH         LINE#         28
+  C:015FH         LINE#         30
+  -------         ENDPROC       CMG88
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        cnt
+  C:0146H         LINE#         34
+  C:0146H         LINE#         35
+  C:0146H         LINE#         36
+  C:014FH         LINE#         37
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0016H         SYMBOL        i
+  -------         ENDDO         
+  C:00E7H         LINE#         41
+  C:00E7H         LINE#         42
+  C:00E7H         LINE#         45
+  C:00E7H         LINE#         46
+  C:00E7H         LINE#         47
+  C:00EAH         LINE#         48
+  C:00F2H         LINE#         49
+  C:00FAH         LINE#         50
+  C:0101H         LINE#         51
+  C:0103H         LINE#         52
+  C:0108H         LINE#         53
+  C:010BH         LINE#         54
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TEST22
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN
+    MODULE:  test.obj (TEST)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MAIN
+    MODULE:  test22.obj (TEST22)
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  test22.obj (TEST22)
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/21/2020  15:14:47  PAGE 5
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN?TEST
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN?TEST22
+
+*** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
+    SYMBOL:  MAIN
+    MODULE:  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+    ADDRESS: 0010H
+
+Program Size: data=24.0 xdata=0 code=365
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  4 ERROR(S)

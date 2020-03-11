@@ -1,0 +1,3 @@
+"ledtest.obj" 
+TO "testled_un" 
+RAMSIZE(256) 

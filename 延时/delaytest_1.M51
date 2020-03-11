@@ -1,0 +1,102 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/24/2020  14:52:47  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE delaytest_1.obj TO delaytest_1 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  delaytest_1.obj (DELAYTEST_1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  delaytest_1 (DELAYTEST_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?DELAYTEST_1
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     001FH     UNIT         ?PR?MAIN?DELAYTEST_1
+            CODE    002DH     0013H     UNIT         ?PR?T0_TIME?DELAYTEST_1
+            CODE    0040H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   delaytest_1 (DELAYTEST_1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?DELAYTEST_1
+
+
+
+SYMBOL TABLE OF MODULE:  delaytest_1 (DELAYTEST_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DELAYTEST_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:002DH         PUBLIC        T0_time
+  D:00B8H         PUBLIC        IP
+  C:000EH         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/24/2020  14:52:47  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:0090H.1       PUBLIC        led
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:0008H         PUBLIC        sum
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:000EH         LINE#         5
+  C:000EH         LINE#         6
+  C:000EH         LINE#         7
+  C:0011H         LINE#         8
+  C:0014H         LINE#         9
+  C:0017H         LINE#         10
+  C:0019H         LINE#         11
+  C:001BH         LINE#         12
+  C:001DH         LINE#         13
+  C:001DH         LINE#         14
+  C:0025H         LINE#         15
+  C:0027H         LINE#         16
+  C:002BH         LINE#         17
+  C:002BH         LINE#         18
+  -------         ENDPROC       MAIN
+  -------         PROC          T0_TIME
+  C:002DH         LINE#         20
+  C:002FH         LINE#         22
+  C:0032H         LINE#         23
+  C:0035H         LINE#         24
+  C:003DH         LINE#         25
+  -------         ENDPROC       T0_TIME
+  -------         ENDMOD        DELAYTEST_1
+
+Program Size: data=11.0 xdata=0 code=68
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
